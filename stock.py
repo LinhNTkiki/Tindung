@@ -104,7 +104,7 @@ def main():
     # Customer data input fields
     col1, col2 = st.sidebar.columns(2)
     with col1:
-        occupation = st.selectbox("Nghề nghiệp", ["Nhà khoa học", "Kỹ sư", "Kiến trúc sư", "Nghề khác", "Luật sư", "Thợ cơ khí", "Doanh nhân", "Giáo viên", "Kế toán", "Bác sĩ", "Quản lý truyền thông", "Lập trình viên", "Nhạc sĩ", "Nhà báo", "Nhà văn", "Quản lý"], help="Customer's occupation type")
+        occupation = st.selectbox("Nghề nghiệp", ["Nhà khoa học", "Kỹ sư", "Kiến trúc sư", "Nghề khác", "Luật sư", "Thợ cơ khí", "Doanh nhân", "Giáo viên", 'Kế toán', 'Bác sĩ', 'Quản lý truyền thông', 'Lập trình viên', 'Nhạc sĩ', 'Nhà báo', 'Nhà văn', 'Quản lý'], help="Customer's occupation type")
         annual_income = st.number_input("Thu nhập hàng năm.", min_value=0.0, step=500.0, value=50000.0, help="Tổng thu nhập hàng năm của khách hàng.")
         monthly_salary = st.number_input("Lương tháng thực nhận.", min_value=0.0, step=50.0, value=3000.0, help="Lương tháng nhận được sau khi trừ các khoản khấu trừ.")
         interest_rate = st.number_input("Lãi suất (%)", min_value=0.0, step=0.1, value=5.0, help="Lãi suất hàng năm theo tỷ lệ phần trăm.")
