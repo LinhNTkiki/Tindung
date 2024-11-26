@@ -60,8 +60,8 @@ st.markdown("""
 
 # Home page content
 def home_page():
-    st.markdown("<h1 class='main-title'>Credit Score Prediction App</h1>", unsafe_allow_html=True)
-    st.markdown("<p class='welcome-text'>This app provides credit score predictions based on customer details. Use the sidebar to input customer information, then click 'Predict' to view the credit score.</p>", unsafe_allow_html=True)
+    st.markdown("<h1 class='main-title'>Ứng dụng dự đoán điểm tín dụng</h1>", unsafe_allow_html=True)
+    st.markdown("<p class='welcome-text'>Ứng dụng này cung cấp dự đoán điểm tín dụng dựa trên thông tin chi tiết của khách hàng. Sử dụng thanh bên để nhập thông tin khách hàng, sau đó nhấn "Dự đoán" để xem điểm tín dụng.</p>", unsafe_allow_html=True)
 
 # Load the dataset
 @st.cache_data
@@ -104,14 +104,14 @@ def main():
     # Customer data input fields
     col1, col2 = st.sidebar.columns(2)
     with col1:
-        occupation = st.selectbox("Occupation", ["Scientist", "Engineer", "Architect", "Other", 'Lawyer', 'Mechanic', 'Entrepreneur', 'Teacher', 'Accountant', 'Doctor', 'Media_Manager', 'Developer', 'Musician', 'Journalist', 'Writer', 'Manager'], help="Customer's occupation type")
-        annual_income = st.number_input("Annual Income", min_value=0.0, step=500.0, value=50000.0, help="Total yearly income of the customer")
-        monthly_salary = st.number_input("Monthly Inhand Salary", min_value=0.0, step=50.0, value=3000.0, help="Monthly salary received after deductions")
-        interest_rate = st.number_input("Interest Rate (%)", min_value=0.0, step=0.1, value=5.0, help="Annual interest rate in percentage")
+        occupation = st.selectbox("Nghề nghiệp", ["Nhà khoa học", "Kỹ sư", "Kiến trúc sư", "Nghề khác", "Luật sư", "Thợ cơ khí", "Doanh nhân", "Giáo viên", "Kế toán", "Bác sĩ", "Quản lý truyền thông", "Lập trình viên", "Nhạc sĩ", "Nhà báo", "Nhà văn", "Quản lý"], help="Customer's occupation type")
+        annual_income = st.number_input("Thu nhập hàng năm.", min_value=0.0, step=500.0, value=50000.0, help="Tổng thu nhập hàng năm của khách hàng.")
+        monthly_salary = st.number_input("Lương tháng thực nhận.", min_value=0.0, step=50.0, value=3000.0, help="Lương tháng nhận được sau khi trừ các khoản khấu trừ.")
+        interest_rate = st.number_input("Lãi suất (%)", min_value=0.0, step=0.1, value=5.0, help="Lãi suất hàng năm theo tỷ lệ phần trăm.")
 
     with col2:
-        delay_due_date = st.number_input("Days Delayed from Due Date", min_value=0, step=1, value=0, help="Number of days payment is delayed from due date")
-        delayed_payments = st.number_input("Number of Delayed Payments", min_value=0, step=1, value=0, help="Total count of delayed payments")
+        delay_due_date = st.number_input("Số ngày chậm trễ so với ngày đến hạn", min_value=0, step=1, value=0, help="Số ngày thanh toán bị chậm so với ngày đến hạn.")
+        delayed_payments = st.number_input("Số lần thanh toán chậm.", min_value=0, step=1, value=0, help="Tổng số lần thanh toán chậm.")
         outstanding_debt = st.number_input("Outstanding Debt", min_value=0.0, step=100.0, value=1000.0, help="Total amount of debt yet to be paid")
         credit_utilization = st.number_input("Credit Utilization Ratio", min_value=0.0, max_value=100.0, step=0.1, value=50.0, help="Percentage of credit used against total credit available")
 
