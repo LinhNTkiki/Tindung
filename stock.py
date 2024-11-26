@@ -61,7 +61,7 @@ st.markdown("""
 # Home page content
 def home_page():
     st.markdown("<h1 class='main-title'>Ứng dụng dự đoán điểm tín dụng</h1>", unsafe_allow_html=True)
-    st.markdown("<p class='welcome-text'>Ứng dụng này cung cấp dự đoán điểm tín dụng dựa trên thông tin chi tiết của khách hàng. Sử dụng thanh bên để nhập thông tin khách hàng, sau đó nhấn "Dự đoán" để xem điểm tín dụng.</p>", unsafe_allow_html=True)
+    st.markdown("<p class='welcome-text'>Ứng dụng này cung cấp dự đoán điểm tín dụng dựa trên thông tin chi tiết của khách hàng. Sử dụng thanh bên để nhập thông tin khách hàng, sau đó nhấn Dự đoán để xem điểm tín dụng.</p>", unsafe_allow_html=True)
 
 # Load the dataset
 @st.cache_data
